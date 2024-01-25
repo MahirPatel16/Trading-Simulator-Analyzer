@@ -1,0 +1,162 @@
+/* Reset some default styles */
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #212121; /*Dark background color */
+  color: #ffffff; /* Light text color */
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  /* min-height: 200vh; */
+  background: url("../images/bg5.jpg") repeat center center fixed;
+  background-size: cover;
+  /* opacity:0. ; */
+}
+nav {
+  background-color: #000018;
+  position: fixed;
+  min-width: 100%;
+  font-weight: 800;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+ 
+ .navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  position: fixed; 
+ }
+
+.brand {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+/* Responsive styles for smaller screens */
+
+header {
+  text-align: center;
+  /* background-color: #34a1db;  */
+  color: #ffe3e3;
+  padding: 0px 0;
+}
+
+/* h1 {
+
+  margin: auto;
+  color: #ffffff; /* Light text color */
+  /* font-weight: 800;} */
+
+.form-section {
+  min-width: 500px;
+  /* height: 400px; */
+  /* margin-top: 0; */
+  /* margin-left: 40%; */
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #000018; /* Darker background color for the form section */
+  border-radius: 8px;
+  /* box-shadow: 0 2px 4px rgb(44, 180, 218); */
+  /* opacity: 0.2; */
+}
+
+form {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  /* opacity: 1; */
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #ddd; /* Lighter text color for labels */
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  /* border: 1px solid #555; Darker border color */
+  cursor: text;
+  /* opacity: 0.4; */
+  border-radius: 8px;
+  border: 1px solid;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-top-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-color: #282D33;
+  
+  appearance: auto;
+  box-sizing: border-box;
+  background-color: #161616; /* Darker background color for input/select */
+  color: #fff; /* Light text color for input/select */
+  transition: all 0.4s ease;
+}
+input:hover{
+    border-color: #2ec7cc;
+}
+select {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* background: url('data:image/svg+xml;utf8,<svg fill="#fff" height="24" width="24" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z" /></svg>') no-repeat right center; */
+  /* background-size: 20px; */
+}
+select:hover{
+    border-color: #2ec7cc;
+}
+button {
+  padding: 12px 20px;
+  background-color: #2ecc71;
+  color: #fff;
+  font-weight: 700;
+  /* font-size: 11px; */
+  text-transform: uppercase;
+  box-sizing: border-box;
+  border: solid 1.5px transparent;
+  border-radius: 8px;
+  font-family: Open Sans, sans-serif;
+  cursor: pointer;
+  box-shadow: 2px 1000px 1px #0c0c0c inset;
+  background-image: linear-gradient(135deg, #7a76ff, #7a76ff, #7fe4ff);
+  background-size: 200% 100%;
+  background-position: 99%;
+  transition: box-shadow 0.4s linear;
+  /* transition: background-image  0.4s ease; */
+
+}
+
+button:hover {
+  /* background-image: #27ae60; */
+  background-image: linear-gradient(#7a76ff, #7a76ff, #7a76ff);
+  box-shadow: none;
+
+  /* transition: box-shadow 0.1s ease-in-out; */
+}
+option {
+  background-color: #212121;
+}
+footer {
+  text-align: center;
+  font-size: 1.2rem;
+  /* background-color: #3498db; */
+  color: #fff;
+  margin-top: auto;
+  margin-bottom: 0;
+}
