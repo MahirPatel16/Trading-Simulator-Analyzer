@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block title %}
+  Market Page
+{% endblock %}
+
+{% block content %}
+<!-- <div id="navlist">
+    <a href="#">Home</a>
+    <a href="#">Our Products</a>
+    <a href="#">Careers</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact Us</a> -->
+
+    <!-- search bar right align -->
+    <!-- <div class="search">
+        <form action="#">
+            <input type="text" placeholder="Search Courses" name="search">
+            <button>
+                <i class="fa fa-search" style="font-size: 18px;"></i>
+            </button>
+        </form>
+    </div>
+</div> -->
+      <table class="table table-hover table-dark">
+        <thead>
+            <tr>
+                <!-- columns_to_keep = ['SYMBOL', 'OPEN', 'HIGH','LOW','CLOSE','SERIES'] -->
+                <!-- Your Columns HERE -->
+                <th scope="col">Name</th>
+                <th scope="col">Open</th>
+                <th scope="col">High</th>
+                <th scope="col">Low</th>
+                <th scope="col">Close</th>
+                <th scope="col">Series</th>
+                <th scope="col">Options</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Your rows inside the table HERE: -->
+            {% for item in items %}
+                <tr>
+                    <td>{{ item.SYMBOL }}</td>
+                    <td>{{ item.OPEN }}</td>
+                    <td>{{ item.HIGH }}</td>
+                    <td>{{ item.LOW }}</td>
+                    <td>{{ item.CLOSE }}</td>
+                    <td>{{ item.SERIES }}$</td>
+                    <td>
+                        <button class="btn btn-outline btn-info">More Info</button>
+                        <button class="btn btn-outline btn-success">Purchase this Item</button>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

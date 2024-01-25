@@ -1,0 +1,77 @@
+<!-- 
+
+
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-register col-md-6 order-md-2" style="color:white">
+            <img class="mb-4" src="/market/templates/images.jpg" alt="">
+            <h1 class="h3 mb-3 font-weight-normal">
+                Please Create your Account
+            </h1>
+            <br>
+            {{ form.username.label() }}
+            {{ form.username(class="form-control", placeholder="User Name") }}
+
+            {{ form.email_address.label() }}
+            {{ form.email_address(class="form-control", placeholder="Email Address") }}
+
+            {{ form.password1.label() }}
+            {{ form.password1(class="form-control", placeholder="Password") }}
+
+            {{ form.password2.label() }}
+            {{ form.password2(class="form-control", placeholder="Confirm Password") }}
+
+            <br>
+
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+
+        </form>
+    </div>
+</body>
+ -->
+ {% extends 'base.html' %}
+ {% block title %}
+     Register Page
+ {% endblock %}
+ 
+ {% block content %}
+ <body class="text-center">
+     <div class="container">
+         <div class="row">
+             <div class="col-md-6 order-md-1">
+                 <!-- Form on the left side -->
+                 <form method="POST" class="form-register" style="color:white">
+                     <br>
+                     <h1 class="h3 mb-3 font-weight-normal">
+                         Please Create your Account
+                     </h1>
+                     
+                     {{ form.username.label() }}
+                     {{ form.username(class="form-control", placeholder="User Name") }}
+ 
+                     {{ form.email_address.label() }}
+                     {{ form.email_address(class="form-control", placeholder="Email Address") }}
+ 
+                     {{ form.password1.label() }}
+                     {{ form.password1(class="form-control", placeholder="Create Password") }}
+ 
+                     {{ form.password2.label() }}
+                     {{ form.password2(class="form-control", placeholder="Confirm Password") }}
+ 
+                     <br>
+ 
+                     {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+                 </form>
+             </div>
+             <div class="col-md-6 order-md-2">
+                <br>
+                <br>
+                 
+                <!-- Image on the right side -->
+                 <img class="mb-4" src="https://u.osu.edu/duska.7/files/2017/04/stock-market-3-21gyd1b.jpg" alt="" width=700 height=400>
+             </div>
+         </div>
+     </div>
+ </body>
+ {% endblock %}
+ 
