@@ -1,0 +1,38 @@
+{% extends 'base2.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="../static/css/style_login.css"/>
+{% endblock %}
+ {% block title %}
+     Login Page
+ {% endblock %}
+ {%block login%}
+    LOG IN
+ {%endblock%}
+ {% block content %}
+ <body class="text-center" >
+     <div class="container">
+         <div class="row">
+             <div class="col-md-6 order-md-1">
+                 <!-- Form on the left side -->
+                 <form method="POST" class="form-register" style="color:white">
+                     <br>
+                     <h1 class="h3 mb-3 font-weight-normal">
+                         ACCOUNT LOGIN
+                     </h1>
+                     {{ form.userid.label(class="custom-label") }}
+                     {{ form.userid(class="form-control", placeholder="User Name / Email Address") }}
+ 
+                     {{ form.password.label(class="custom-label") }}
+                     {{ form.password(class="form-control", placeholder="Create Password") }}
+
+                     <br>
+ 
+                     {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+                 </form>
+             </div>
+         </div>
+     </div>
+ </body>
+ {% endblock %}
+ 
