@@ -1,0 +1,94 @@
+/* styles.css */
+
+
+
+.container {
+  margin: 20px;
+}
+
+table {
+  width: 100%;
+  background: url(../images/bg5.jpg ) repeat center center fixed;
+  /* background-color: #000000; */
+  margin-bottom: 20px;
+  position: absolute;
+  top: 77px;
+}
+
+table,
+th,
+td {
+  /* border: 1px solid linear-gradient(135deg, #7a76ff, #7a76ff, #7fe4ff); */
+  border-collapse: collapse;
+  
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: center;
+  font-weight: 600;
+  /* box-sizing: border-box; */
+  border: 1px solid #181e1b; 
+  /* background: linear-gradient(135deg, #e33db9, #76ffcf, #e37fff); */
+  /* box-shadow: #000000; */
+  /* box-shadow: 2px 1000px 2px  #000000 inset; */
+  /* background-position: 99%; */
+
+  /* border-image-slice: 1; */
+}
+
+thead {
+  /* background-color: #212529; */
+  color: white;
+}
+
+/* tbody tr:nth-child(even) {
+  background: url(../images/bg5.jpg ) repeat center center fixed;
+
+} */
+
+tbody tr:hover {
+  background-color: #b4b4b4;
+}
+
+.btn {
+  margin-right: 5px;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.btn-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.search {
+  float: right;
+  margin-top: 10px;
+}
+
+.search form {
+  display: inline-block;
+}
+
+.search input[type="text"] {
+  padding: 8px;
+}
+
+.search button {
+  padding: 8px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.search button i {
+  font-size: 18px;
+}
+
+/* Add any additional styles as needed */
