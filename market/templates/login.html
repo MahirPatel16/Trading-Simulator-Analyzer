@@ -1,21 +1,60 @@
-{% extends 'base2.html' %}
+{% extends 'base.html' %}
 
 {% block head %}
     <link rel="stylesheet" href="../static/css/style_login.css"/>
 {% endblock %}
  {% block title %}
-     Login Page
+     Login Page 
  {% endblock %}
  {%block login%}
     LOG IN
  {%endblock%}
  {% block content %}
- <body class="text-center" >
+
+body class="text-center">
+    <br>
+    <br>
+    <br>
+    <div class="form-register-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 order-md-1">
+                    <!-- Form on the left side -->
+                    <form method="POST" class="form-register" style="color:white">
+                        <br>
+                        <h1 class="h3 mb-3 font-weight-normal">
+                            Login into your Account
+                        </h1>
+
+                        {{ form.username.label() }}
+                        {{ form.username(class="form-control", placeholder="User Name / Email Address") }}
+
+                        {{ form.password.label() }}
+                        {{ form.password(class="form-control", placeholder="Create Password") }}
+
+                        <br>
+
+                        {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+                    </form>
+                </div>
+                <div class="col-md-6 order-md-2">
+                    <br>
+                    <br>
+
+                    <!-- Image on the right side -->
+                    <!-- <img class="mb-4" src="https://u.osu.edu/duska.7/files/2017/04/stock-market-3-21gyd1b.jpg" alt="" width=700 height=400> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!--  <body class="text-center" >
      <div class="container">
          <div class="row">
              <div class="col-md-6 order-md-1">
                  <!-- Form on the left side -->
-                 <form method="POST" class="form-register" style="color:white">
+                 <!-- <form method="POST" class="form-register" style="color:white">
                      <br>
                      <h1 class="h3 mb-3 font-weight-normal">
                          ACCOUNT LOGIN
@@ -33,6 +72,7 @@
              </div>
          </div>
      </div>
- </body>
+ </body> -->
+
  {% endblock %}
  
