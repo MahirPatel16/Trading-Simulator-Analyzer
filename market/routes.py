@@ -12,8 +12,7 @@ import requests
 
 NEWS_API_KEY = '737401ce7fb44b42b952c278fb01ebf0'
 
-@app.route('/')
-@app.route('/home')
+@app.route('/stocks')
 def home_page():
     return render_template('index.html')
 
@@ -109,7 +108,8 @@ def login_page():
     form = LoginForm()
     return render_template('login.html', form=form)
 
-@app.route('/dashboard')
+@app.route('/')
+@app.route('/home')
 def dashboard_page():
     return render_template('dashboard.html')
 

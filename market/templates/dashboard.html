@@ -1,0 +1,69 @@
+{% extends 'base2.html' %}
+{%block title%}
+    Dashboard
+{%endblock%}
+{%block head%}
+    <link rel="stylesheet" href="../static/css/style_dashboard.css"/>
+{%endblock%}
+{%block link%}
+    href="/register"
+ {%endblock%}
+ {%block register%}
+    HELLO USERNAME
+ {%endblock%}
+ {%block login%}
+    LOG OUT
+ {%endblock%}
+{%block content%}
+
+    <div class="container">
+        <div class="first item bg">
+
+        </div>
+        <div class="second item">
+            <div class="upper bg">
+                
+            </div>
+            <div class="below bg">
+
+            </div>
+        </div>
+        <div class="third item bg">
+            <h2>Business News</h2>
+            <ul id="news-list"></ul>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            function fetchNews() {
+                $.ajax({
+                    type: "GET",
+                    url: "/get_news",
+                    success: function(response){
+                        displayNews(response);
+                    },
+                });
+            }
+            function displayNews(news){
+                var newsList=$("#news-list");
+                newsList.empty();
+
+                var maxHeadlines = 8;
+                for (var i = 0; i < Math.min(news.length, maxHeadlines); i++) {
+                var article = news[i];
+                var listItem = $("<li>");
+                listItem.html(
+                    `<a href="${article.url}" target="_blank">${article.title}</a>`
+                );
+                newsList.append(listItem);
+                }
+            }
+            fetchNews();
+        
+        });
+    </script>
+
+
+
+{%endblock%}
+

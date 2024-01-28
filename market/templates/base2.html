@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../static/css/style_base2.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
     {% block head %}
 
     {% endblock %}
@@ -29,18 +31,23 @@
                 height="40px"
               />
             </div>
-            <a href="#" class="brand">TRADE BREEZERS</a>
+            <a href="/" class="brand">TRADE BREEZERS</a>
             <div class="nav-links">
               <a href="/home">Home</a>
-              <a href="/market">Live Market</a>
+              <a href="/market">Market</a>
               <!-- <a href="#">Yesterday Market</a> -->
-              <a href="#">About Us</a>
-              <a href="#">Contact Us</a>
+              <a href="/stocks">Compare Stocks</a>
             </div>
           </div>
 
           <div class="right-container nav-links">
-            <a href="#">Sign Up</a>
+            <a 
+              {%block link%}
+              {%endblock%}
+            >
+              {%block register%}
+              {%endblock%}
+            </a>
             <a href="/login">
               {%block login%}
               {%endblock%}
@@ -56,5 +63,6 @@
     <footer>
       <p>&copy; 2024 TRADE BREEZERS</p>
     </footer>
+
   </body>
 </html>
