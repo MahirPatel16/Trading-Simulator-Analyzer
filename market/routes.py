@@ -24,7 +24,7 @@ def show_graph():
         stock_symbols_input = request.form['stock_symbol']
         stock_symbols = [symbol.strip() for symbol in stock_symbols_input.split(',')] 
         # additional_stock = request.form.get('additional_stock')
-
+        stock_info=request.form['stock_data']
         today = date.today()
         if duration == '1w':
             back = today - relativedelta(days=7)
@@ -44,9 +44,9 @@ def show_graph():
         for symbol in stock_symbols:
             stock_data = stock_df(symbol=symbol, from_date=back, to_date=today, series="EQ")
             stock_data = stock_data.sort_values(by='DATE', ascending=True)
-
+            
             # Merge the data into the combined DataFrame using DATE as the key
-            combined_data = pd.merge(combined_data, stock_data[['DATE', 'CLOSE']].rename(columns={'CLOSE': symbol}),how='left', on='DATE')
+            combined_data = pd.merge(combined_data, stock_data[['DATE', stock_info]].rename(columns={stock_info: symbol}),how='left', on='DATE')
         # combined_data=combined_data.interpolate
         # combined_data['DATE'] = pd.to_datetime(combined_data['DATE'])  # Ensure 'DATE' column is in datetime format
         combined_data = combined_data.set_index('DATE').interpolate().reset_index()

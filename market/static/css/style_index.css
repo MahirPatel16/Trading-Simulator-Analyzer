@@ -36,7 +36,8 @@ body {
 }
 
 #griditem3{
-  width: 36.6%;
+  min-width: 36.6%;
+  
 
 }
 #griditem4{
