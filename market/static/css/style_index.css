@@ -41,7 +41,15 @@ body {
 
 }
 #griditem4{
-  background-color: #fff;
   width: 63%;
+
+}
+#stock_symbol{
+  transition: width 0.3s ease-in-out ;
+}
+.graph{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(12, 23, 98, 0.2);
 
 }

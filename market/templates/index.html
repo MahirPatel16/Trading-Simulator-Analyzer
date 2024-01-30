@@ -22,7 +22,7 @@
 
 {%block content%}
 <div class="graph-container">
-  <div class="grid-items " id="griditem3">
+  <div class="grid-items" id="griditem3">
     <form action="/graph" method="post" id="stock-form">
       <div class="first">
         <div class="input0">
@@ -63,7 +63,9 @@
     </form>
   </div>
   <div class="grid-items form-section" id="griditem4">
-    
+    <div class="graph">
+
+    </div>
   </div>
 </div>
 <script>
@@ -77,7 +79,7 @@
         url: "/graph",
         data: $("#stock-form").serialize(),
         success: function (response) {
-          $("#griditem4").html(response);
+          $(".graph").html(response);
         },
       });
     });
@@ -85,6 +87,21 @@
           $("#stock-form").submit(); // Trigger the form submission when the button is clicked
     });
 
+  });
+</script>
+<script>
+  function updateWidth(input) {
+    const newWidth = input.value.length * 10;
+    const minWidth = 200;
+    const maxWidth = 500;
+    input.style.width = Math.min(Math.max(newWidth, minWidth) , maxWidth) + 'px';
+  }
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const stockSymbolInput = document.getElementById('stock_symbol');
+    stockSymbolInput.addEventListener('input', function () {
+      updateWidth(this);
+    });
   });
 </script>
 {%endblock%} 

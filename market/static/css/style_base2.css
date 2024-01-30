@@ -92,12 +92,10 @@ form {
   text-align: center;
   /* margin-top: 100px; */
 }
-.input0>input{
-  text-align: center;
 
-}
 .input0{
   width: 100%;
+  
   /* flex-basis: 100%; */
 }
 .input1{
@@ -108,6 +106,7 @@ form {
 }
 .first{
   display: flex;
+  
   /* flex-basis: 100px; */
   /* width: 80%; */
   /* align-items: center; */
@@ -128,7 +127,7 @@ label {
   color: #ddd; /* Lighter text color for labels */
 }
 #stock_symbol{
-  width: 100%;
+  width: 200px;
 }
 input,
 select {

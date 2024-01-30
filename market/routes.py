@@ -50,9 +50,9 @@ def show_graph():
         # combined_data=combined_data.interpolate
         # combined_data['DATE'] = pd.to_datetime(combined_data['DATE'])  # Ensure 'DATE' column is in datetime format
         combined_data = combined_data.set_index('DATE').interpolate().reset_index()
-        fig = px.line(combined_data, x='DATE', y=combined_data.columns[1:], title=f'Stock Prices ({duration.capitalize()})')
+        fig = px.line(combined_data, x='DATE', y=combined_data.columns[1:], title=f'Stock {stock_info} ({duration.capitalize()})')
         
-        fig.update_traces(hovertemplate='Date: %{x}<br> Close:%{y:.2f} ')
+        fig.update_traces(hovertemplate='Date: %{x}<br>' + f'{stock_info}:' + ' %{y:.2f} ')
         fig.update_xaxes(title_text='Date', tickformat='%d %b %Y')
         fig.update_yaxes(title_text='Stock Price (INR)')
 

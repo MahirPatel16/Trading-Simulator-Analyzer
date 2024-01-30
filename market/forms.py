@@ -10,6 +10,6 @@ class RegisterForm(FlaskForm):
     submit = SubmitField(label='Create Account')
 
 class LoginForm(FlaskForm):
-    userid = StringField(label='Enter your Username / Email Address', validators=[Length(min=2,max=30), DataRequired()])
+    username = StringField(label='Enter your Username / Email Address', validators=[Length(min=2,max=30), DataRequired()])
     password = PasswordField(label='Enter your password', validators=[Length(min=6), DataRequired()])
     submit = SubmitField(label='Login')
