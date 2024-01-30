@@ -19,3 +19,7 @@ Design an interface
 ### Register.html
 1. Database Management
 2. 
+
+# Unique dashboard
+# top gainers
+# last market day
