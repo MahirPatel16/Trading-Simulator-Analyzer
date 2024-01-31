@@ -3,7 +3,7 @@ body {
   /* background-color: #212121; Dark background color */
   color: #ffffff; /* Light text color */
   /* margin: 0; */
-  background-color:#000000;
+  background-color: rgb(0, 0, 0);
   /* padding: 0; */
   text-transform: uppercase;
   /* display: flex; */
@@ -15,11 +15,6 @@ body {
   /* background-size: cover; */
   /* opacity:0. ; */
 }
-
-
-
-
-
 
 button:hover {
   /* background-image: #27ae60; */
@@ -70,11 +65,11 @@ select {
   /* opacity: 0.4; */
   border-radius: 8px;
   border: 1px solid;
-  border-color: #ffffff;
+  border-color: #282d33;
 
   /* appearance: auto; */
   box-sizing: border-box;
-  background-color: #0c0c0c; /* Darker background color for input/select */
+  background-color: #000000; /* Darker background color for input/select */
   color: #fff; /* Light text color for input/select */
   transition: all 0.4s ease;
 }
@@ -136,9 +131,6 @@ label {
   
 }
 
-
-/* Reset some default styles */
-
 .graph-container{
   position:absolute;
   top: 81px;
@@ -149,13 +141,13 @@ label {
   width: 100%;
   height: 87.5%;
 }
-.grid-items{
+/* .grid-items{ */
   /* background-color: #6161b9; */
   /* border-radius: 8px; */
   /* padding: 8px; */
   /* background: url(../images/bg5.jpg) repeat center center fixed; */
 
-}
+/* } */
 
 #griditem3{
   min-width: 36.6%;
