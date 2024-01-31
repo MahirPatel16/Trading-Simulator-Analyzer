@@ -1,76 +1,304 @@
 body {
-    /* font-family: "Roboto", sans-serif; */
-    height: 110vh;
-    color: #fdfdfd;/* Light text color
-    /* background: url(../images/bg5.jpg) repeat center center fixed; */
-    background-color: rgb(109, 109, 109);
-  }
-  .container {
-    display: flex;
-    justify-content: space-evenly;
-    /* background-color: #ffffff; */
-    position: absolute;
-    /* left:2.5%; */
-    top: 81px;
-    width: 100%;
-    height: 87.5%;
-  }
-  .bg {
-    background: url(../images/bg5.jpg) repeat center center fixed;
-    border-radius: 10px;
-  }
-  h2{
-      margin-bottom: 0;
-      margin-top: 12px;
-      font-weight: 800;
-  }
-  .first {
-    width: 25%;
-  }
-  .second {
-    width: 48.5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .third {
-    width: 25%;
-    padding: 8px;
-    padding-top: 2px;
-  }
-  .upper {
-    /* background-color: aqua; */
-    /* flex-basis: 55%; */
-    height: 55%;
-  }
-  .below {
-    /* flex-basis: 40%; */
-    /* background-color: rgb(255, 255, 255); */
-    height: 44%;
-    padding: 2px;
-    /* padding-bottom: px; */
-  }
-  #news-list {
-      list-style:none;
-      padding: 0;
-      font-size: small;
-    }
-  #news-list li {
-    margin-bottom: 10px;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 5px;
-  }
-  
-  #news-list a {
-    color: #fff; /* Set the link color */
-    text-decoration: none;
-    font-weight: 400;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-    font-size: 16px;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  #news-list a:hover {
-    color: #7a76ff; /* Change link color on hover */
-  }
-  
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
+  height: 110vh;
+  color: #ffffff; /* Light text color */
+  /* color: #fdfdfd; */
+  /* Light text color */
+  /* background: url(../images/bg5.jpg) repeat center center fixed; */
+  /* background-color: #6d6d6d; */
+  /* background-color: #000018; */
+}
+nav {
+  /* background-color: #8686a6; */
+  /* background: url(../images/bg5.jpg) repeat center center fixed; */
+  /* height: auto; */
+  position: fixed;
+  min-width: 100%;
+  font-weight: 800;
+  font-size: large;
+  z-index: 1;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.navbar {
+  /* background: url(../images/bg5.jpg); */
+  display: flex;
+  justify-content: space-between;
+  padding: 17px;
+  position: relative;
+  /* top: 25px; */
+  /* left: 20px; */
+}
+
+.brand {
+  /* color: linear-gradient(#7a76ff, #2ec7cc, #5154f9); */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.5em;
+  padding-top: 1%;
+}
+
+.nav-links {
+  color: #2ec7cc;
+  display: flex;
+  gap: 30px;
+  margin: 0 15px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+.nav-links > a {
+  color: aliceblue;
+  text-decoration: none;
+}
+.nav-links > a:hover {
+  color: #7a76ff;
+}
+.nav-links > div {
+  display: flex;
+  gap: 20px;
+}
+/* Responsive styles for smaller screens */
+.left-column {
+  display: flex;
+  gap: 40px;
+}
+
+.toppers-container {
+  display: flex;
+  justify-content: space-evenly;
+  /* background-color: #ffffff; */
+  position: absolute;
+  /* left:2.5%; */
+  top: 81px;
+  width: 100%;
+  height: 87.5%;
+}
+.bg {
+  background-color: #000003;
+  /* background: url(../images/bg5.jpg) repeat center center fixed; */
+  border-radius: 10px;
+}
+h2 {
+  margin-bottom: 0 px;
+  margin-top: 12px;
+  font-weight: 800;
+}
+.first {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* background-color: #6d6d6d; */
+}
+.second {
+  width: 48.5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.third {
+  width: 25%;
+  padding: 8px;
+  padding-top: 2px;
+}
+.upper {
+  /* background-color: aqua; */
+  /* flex-basis: 55%; */
+  height: 55%;
+  flex-grow: 1;
+  /* z-index: 20; */
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.below {
+  /* flex-basis: 40%; */
+  /* background-color: rgb(255, 255, 255); */
+  height: 44%;
+  padding: 2px;
+  /* padding-bottom: px; */
+}
+.search-bar form {
+  height: 100%;
+  text-align: center;
+
+}
+.top-gainer-container {
+  height: 46%;
+  /* background-color: #0ee2384d; Add your desired background color */
+  padding: 10px;
+  border-radius: 8px;
+  /* box-shadow: 0 0 10px #e3dfdfd3; */
+}
+.top-loser-container {
+  height: 46%;
+  /* background-color: #e20e0e66; Add your desired background color */
+  padding: 10px;
+  border-radius: 8px;
+  /* box-shadow: 0 0 10px #e3dfdfd3; */
+}
+
+.topper-title {
+  /* margin-bottom: 10 px; */
+  /* margin-top: 12px; */
+  font-weight: 800;
+  font-size: 30px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+#news-list {
+  list-style: none;
+  padding: 0;
+  font-size: small;
+}
+#news-list li {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+#news-list a {
+  color: #fff; /* Set the link color */
+  text-decoration: none;
+  font-weight: 400;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out;
+}
+
+#news-list a:hover {
+  color: #7a76ff; /* Change link color on hover */
+}
+#search {
+  width: 30%;
+}
+
+.list-elem-gainer {
+  height: 18%;
+  background-color: #01ed2460;
+  margin-bottom: 10px; /* Add space between list elements */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(221, 221, 221, 0.582); /* Box shadow for a subtle lift effect */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.list-elem-loser {
+  height: 18%;
+  background-color: #9d061f6a;
+  margin-bottom: 10px; /* Add space between list elements */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(221, 221, 221, 0.582); /* Box shadow for a subtle lift effect */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.list-elem-gainer .name,
+.list-elem-loser .name {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.list-elem-gainer .address,
+.list-elem-loser .address {
+  font-size: 13px;
+  color: #ffffff; /* Adjust color as needed */
+}
+
+.list-elem-gainer,
+.list-elem-gainer a {
+  color: #ffffff; /* Text color for the gainer item */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.list-elem-gainer:hover,
+.list-elem-gainer a:hover {
+  background-color: #ffffffbe; /* Change background color on hover */
+  color: #01ee24be; /* Text color on hover */
+}
+
+.list-elem-loser,
+.list-elem-loser a {
+  color: #df0429; /* Text color for the loser item */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.list-elem-loser:hover,
+.list-elem-loser a:hover {
+  background-color: #ffffff; /* Change background color on hover */
+  color: #df0429; /* Text color on hover */
+}
+
+.graph-container {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  overflow: auto;
+  align-items: center;
+  text-align: center;
+}
+.graph-container img {
+  max-width: 100%;
+  max-height: 100%;
+}
+input:hover {
+  border-color: #2ec7cc;
+}
+input,
+select {
+  text-transform: uppercase;
+  width: 80%;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  /* border: 1px solid #555; Darker border color */
+  cursor: text;
+  /* opacity: 0.4; */
+  border-radius: 8px;
+  border: 1px solid;
+  border-color: #282d33;
+
+  /* appearance: auto; */
+  box-sizing: border-box;
+  background-color: #0c0c0c; /* Darker background color for input/select */
+  color: #fff; /* Light text color for input/select */
+  transition: all 0.4s ease;
+}
+
+button {
+  padding: 12px 20px;
+  /* background-color: #2ecc71; */
+  color: #ffffff;
+  font-weight: 700;
+  /* font-size: 11px; */
+  text-transform: uppercase;
+  box-sizing: border-box;
+  border: solid 1.5px transparent;
+  border-radius: 8px;
+  font-family: Open Sans, sans-serif;
+  cursor: pointer;
+  box-shadow: 2px 1000px 1px #0c0c0c inset;
+  background-image: linear-gradient(135deg, #7a76ff, #7a76ff, #7fe4ff);
+  background-size: 200% 100%;
+  background-position: 99%;
+  transition: box-shadow 0.4s linear;
+  /* transition: background-image  0.4s ease; */
+}
+
+button:hover {
+  /* background-image: #27ae60; */
+  background-image: linear-gradient(#7a76ff, #7a76ff, #7a76ff);
+  box-shadow: none;
+
+  /* transition: box-shadow 0.1s ease-in-out; */
+}

@@ -1,25 +1,20 @@
-{% extends 'base2.html' %}
-
+{% extends 'base2.html' %} 
 {%block head%}
-    <link rel="stylesheet" href="../static/css/style_index.css"/>
-{%endblock%}
-
-{%block title%}
-    Compare Stocks
-{%endblock%}
-
-{%block link%}
-    href="/register"
- {%endblock%}
-
- {%block register%}
-    HELLO USERNAME
- {%endblock%}
-
- {%block login%}
-    LOG OUT
- {%endblock%}
-
+<link rel="stylesheet" href="../static/css/style_index.css" />
+{%endblock%} 
+{%block title%} 
+Compare Stocks
+ {%endblock%} 
+ {%block link%}
+href="/register" 
+{%endblock%} 
+{% block profile %}
+<a href="/user_details">{{ username }}</a> 
+{% endblock %} 
+{% block logout %}
+<a  href="/">
+  LOG OUT </a
+>{% endblock %} 
 {%block content%}
 <div class="graph-container">
   <div class="grid-items" id="griditem3">
@@ -54,25 +49,21 @@
             <option value="NO OF TRADES">No. of trades</option>
           </select>
         </div>
-        
       </div>
-      
+
       <div class="third">
         <button type="button" id="show-graph-button">Show Graph</button>
       </div>
     </form>
   </div>
   <div class="grid-items form-section" id="griditem4">
-    <div class="graph">
-
-    </div>
+    <div class="graph"></div>
   </div>
 </div>
 <script>
   $(document).ready(function () {
-    
     $("#stock-form").submit(function (event) {
-      event.preventDefault(); 
+      event.preventDefault();
 
       $.ajax({
         type: "POST",
@@ -84,9 +75,8 @@
       });
     });
     $("#stock-form button").on("click", function () {
-          $("#stock-form").submit(); // Trigger the form submission when the button is clicked
+      $("#stock-form").submit(); // Trigger the form submission when the button is clicked
     });
-
   });
 </script>
 <script>
@@ -94,14 +84,14 @@
     const newWidth = input.value.length * 10;
     const minWidth = 200;
     const maxWidth = 500;
-    input.style.width = Math.min(Math.max(newWidth, minWidth) , maxWidth) + 'px';
+    input.style.width = Math.min(Math.max(newWidth, minWidth), maxWidth) + "px";
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
-    const stockSymbolInput = document.getElementById('stock_symbol');
-    stockSymbolInput.addEventListener('input', function () {
+  document.addEventListener("DOMContentLoaded", function () {
+    const stockSymbolInput = document.getElementById("stock_symbol");
+    stockSymbolInput.addEventListener("input", function () {
       updateWidth(this);
     });
   });
 </script>
-{%endblock%} 
+{%endblock%}

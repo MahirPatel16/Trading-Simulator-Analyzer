@@ -38,11 +38,17 @@ td {
   /* border-image-slice: 1; */
 }
 
-thead {
+/* thead {
   /* background-color: #212529; */
-  color: white;
-}
+  /* color: white; */
+/* } */
 
+thead {
+  position: sticky;
+  top: 77px;
+  z-index: 1;
+  background-color: #212529; /* Add the background color for the sticky header */
+}
 /* tbody tr:nth-child(even) {
   background: url(../images/bg5.jpg ) repeat center center fixed;
 
@@ -52,16 +58,34 @@ tbody tr:hover {
   background-color: #b4b4b4;
 }
 
-.btn {
-  margin-right: 5px;
+button {
+  padding: 12px 20px;
+  background-color: #2ecc71;
+  color: #ffffff;
+  font-weight: 700;
+  /* font-size: 11px; */
+  text-transform: uppercase;
+  box-sizing: border-box;
+  border: solid 1.5px transparent;
+  border-radius: 8px;
+  font-family: Open Sans, sans-serif;
+  cursor: pointer;
+  box-shadow: 2px 1000px 1px #0c0c0c inset;
+  background-image: linear-gradient(135deg, #7a76ff, #7a76ff, #7fe4ff);
+  background-size: 200% 100%;
+  background-position: 99%;
+  transition: box-shadow 0.4s linear;
+  /* transition: background-image  0.4s ease; */
 }
 
 .btn-info {
+  margin-right: 5px;
   background-color: #17a2b8;
   color: white;
 }
 
 .btn-success {
+  margin-right: 5px;
   background-color: #28a745;
   color: white;
 }
@@ -90,5 +114,11 @@ tbody tr:hover {
 .search button i {
   font-size: 18px;
 }
+button:hover {
+  /* background-image: #27ae60; */
+  background-image: linear-gradient(#7a76ff, #7a76ff, #7a76ff);
+  box-shadow: none;
 
+  /* transition: box-shadow 0.1s ease-in-out; */
+}
 /* Add any additional styles as needed */

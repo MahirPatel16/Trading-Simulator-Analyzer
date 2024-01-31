@@ -54,7 +54,14 @@ def show_graph():
         
         fig.update_traces(hovertemplate='Date: %{x}<br>' + f'{stock_info}:' + ' %{y:.2f} ')
         fig.update_xaxes(title_text='Date', tickformat='%d %b %Y')
-        fig.update_yaxes(title_text='Stock Price (INR)')
+        if stock_info == "VOLUME":
+            fig.update_yaxes(title_text='STOCK VOLUME')
+        elif stock_info == "VALUE":
+            fig.update_yaxes(title_text='STOCK VALUE ')
+        elif stock_info == "NO. OF TRADES":
+            fig.update_yaxes(title_text=' No. OF TRADES')
+        else:
+            fig.update_yaxes(title_text='Stock Price (INR)')
 
         fig.update_layout(
             template='plotly_dark',
@@ -119,7 +126,7 @@ def get_news():
     params = {
         'apiKey': NEWS_API_KEY,
         'category': 'business',
-        'country': 'us',  # Adjust country code as needed
+        'country': 'in',  # Adjust country code as needed
     }
 
     response = requests.get(endpoint, params=params)
@@ -132,3 +139,12 @@ def get_news():
 # {'SYMBOL': 'SMARTLINK', 'SERIES': 'EQ', 'OPEN': 186.0, 'HIGH': 186.0, 'LOW': 176.2, 
 #  'CLOSE': 177.05, 'LAST': 177.7, 'PREVCLOSE': 183.35, 'TOTTRDQTY': 25159, 'TOTTRDVAL': 4520201.35, 
 #  'TIMESTAMP': '23-JAN-2024', 'TOTALTRADES': 623, 'ISIN': 'INE178C01020', 'Unnamed: 13': nan},
+
+@app.route('/filter')
+def filterpage():
+    if 'user_id' in session:
+        
+        return render_template('filter.html',username=session['username'])
+    else:
+        flash('Please log in to access the dashboard.')
+        return redirect(url_for('index'))

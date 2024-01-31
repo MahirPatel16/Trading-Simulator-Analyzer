@@ -1,0 +1,55 @@
+
+{% extends 'base2.html' %}
+{%block title%}
+Filter Page
+{%endblock%}
+{%block head%}
+<link rel="stylesheet" href="../static/css/style_filter.css" />
+{%endblock%}
+
+{% block profile %} <a href="/user_details">{{ username }}</a> {% endblock %}
+
+{% block logout %}<a href="/"> LOG OUT </a>{% endblock %}
+
+{%block content%}
+
+<div class="container">
+    <form id="filter-form">
+      <div class="first items">
+        <label for="stock-select">Select Stock:</label>
+        <select id="stock-select" name="stock-select">
+          <option value="">All</option>
+          <option value="stock1">Stock 1</option>
+          <option value="stock2">Stock 2</option>
+          <option value="stock3">Stock 3</option>
+        </select>
+      </div>
+      <div class="second items">
+        <div class="second-left" style="width: 50%;">
+            <label for="from-date">From Date:</label>
+            <input type="date" id="from-date" name="from-date" />
+        </div>
+        <div class="second-right" style="width: 50%;">
+            <label for="to-date">To Date:</label>
+            <input type="date" id="to-date" name="to-date" />
+        </div>
+        
+        </div>
+        <div class="third items">
+        <div class="third-left" style="width: 50%;">
+            <label for="start">Start</label>
+            <input type="text" id="start" name="start" />
+        </div>
+        <div class="third-right" style="width: 50%;">
+            <label for="end">End</label>
+            <input type="text" id="end" name="end" />
+        </div>
+      </div>
+      <div class="fourth items">
+        <button type="button" id="sort-asc">Sort Ascending</button>
+        <button type="button" id="sort-desc">Sort Descending</button>
+        <button type="reset" id="reset">Reset</button>
+      </div>
+    </form>
+</div>
+{%endblock%}

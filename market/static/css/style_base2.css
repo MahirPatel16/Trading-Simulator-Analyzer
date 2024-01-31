@@ -1,22 +1,22 @@
 /* Reset some default styles */
 body {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   /* background-color: #212121; Dark background color */
   color: #ffffff; /* Light text color */
   margin: 0;
   padding: 0;
   text-transform: uppercase;
   display: flex;
-  flex-direction: column;
+  flex-direction: column ;
   /* min-height: 150vh; */
-  background-color: #000018;
+  /* background-color: #000018; */
   /* background: url("../images/bg5.jpg") repeat center center fixed; */
   background-size: cover;
   /* opacity:0. ; */
 }
 nav {
-  /* background-color: #8686a6; */
-  background: url(../images/bg5.jpg) repeat center center fixed;
+  background-color: #000003;
+  /* background: url(../images/bg5.jpg) repeat center center fixed; */
   /* height: auto; */
   position: fixed;
   min-width: 100%;
@@ -69,138 +69,15 @@ nav {
   gap: 40px;
 }
 
-#stock-form{
-  min-width: 400px;
-  display: flex;
-  flex-direction: column;
-  /* z-index: 1; */
-  background: url("../images/bg5.jpg") repeat center center fixed;
-  position: relative;
-  /* top: 60%; */
-  /* margin-left: auto; */
-  margin-bottom: 0px;
-  /* height: ; */
-  /* top: 80px; */
-  /* padding-top: 150px; */
-  padding: 20px;
-  /* background-color: #000018; Darker background color for the form section */
-  /* border-radius: 8px; */
-  
-}
 
-form {
-  text-align: center;
-  /* margin-top: 100px; */
-}
-
-.input0{
-  width: 100%;
-  
-  /* flex-basis: 100%; */
-}
-.input1{
-  width: 50%;
-}
-.input2{
-  width: 50%;
-}
-.first{
-  display: flex;
-  
-  /* flex-basis: 100px; */
-  /* width: 80%; */
-  /* align-items: center; */
-}
-.second{
-  display: flex;
-  flex-direction: row;
-}
-
-label {
-  display: block;
-  /* width: 30%; */
-  margin-bottom: 10px;
-  margin-top: 10px;
-  /* opacity: 1; */
-  text-transform: uppercase;
-  font-weight: 800;
-  color: #ddd; /* Lighter text color for labels */
-}
-#stock_symbol{
-  width: 200px;
-}
-input,
-select {
-  text-transform: uppercase;
-  width: 80%;
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 30px;
-  /* border: 1px solid #555; Darker border color */
-  cursor: text;
-  /* opacity: 0.4; */
-  border-radius: 8px;
-  border: 1px solid;
-  border-color: #282d33;
-
-  /* appearance: auto; */
-  box-sizing: border-box;
-  background-color: #0c0c0c; /* Darker background color for input/select */
-  color: #fff; /* Light text color for input/select */
-  transition: all 0.4s ease;
-}
-input:hover {
-  border-color: #2ec7cc;
-}
-select {
-  cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  /* background: url('data:image/svg+xml;utf8,<svg fill="#fff" height="24" width="24" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z" /></svg>') no-repeat right center; */
-  /* background-size: 20px; */
-}
-select:hover {
-  border-color: #2ec7cc;
-}
-button {
-  padding: 12px 20px;
-  background-color: #2ecc71;
-  color: #ffffff;
-  font-weight: 700;
-  /* font-size: 11px; */
-  text-transform: uppercase;
-  box-sizing: border-box;
-  border: solid 1.5px transparent;
-  border-radius: 8px;
-  font-family: Open Sans, sans-serif;
-  cursor: pointer;
-  box-shadow: 2px 1000px 1px #0c0c0c inset;
-  background-image: linear-gradient(135deg, #7a76ff, #7a76ff, #7fe4ff);
-  background-size: 200% 100%;
-  background-position: 99%;
-  transition: box-shadow 0.4s linear;
-  /* transition: background-image  0.4s ease; */
-}
-
-button:hover {
-  /* background-image: #27ae60; */
-  background-image: linear-gradient(#7a76ff, #7a76ff, #7a76ff);
-  box-shadow: none;
-
-  /* transition: box-shadow 0.1s ease-in-out; */
-}
-option {
-  background-color: #212121;
-}
 footer {
   text-align: center;
   font-size: 1.2rem;
   /* z-index: 1; */
-  background: url(../images/bg5.jpg) repeat center center fixed;
+  /* background: url(../images/bg5.jpg) repeat center center fixed; */
   /* height: auto; */
   /* position: fixed; */
-  /* background-color: #3498db; */
+  background-color: #000003;
   color: #fff;
   height: 9.5%;
   font-weight: 700;

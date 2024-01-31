@@ -5,12 +5,13 @@
 {% block title %}
   Market Page
 {% endblock %}
-{%block login%}
-    LOG OUT
- {%endblock%}
+{% block logout %}<a href="/"> LOG OUT </a>{% endblock %}
+{% block profile %} <a href="/user_details" >{{ username }}</a> {% endblock %}
+
+
 {% block content %}
 <br>
-<br>
+<br><br>
       <table class="table table-hover table-dark">
         <thead>
             <tr>
