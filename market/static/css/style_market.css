@@ -8,8 +8,8 @@
 
 table {
   width: 100%;
-  background: url(../images/bg5.jpg ) repeat center center fixed;
-  /* background-color: #000000; */
+  /* background: url(../images/bg5.jpg ) repeat center center fixed; */
+  background-color: #000000;
   margin-bottom: 20px;
   position: absolute;
   top: 77px;

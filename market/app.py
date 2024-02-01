@@ -285,27 +285,32 @@ def change_csv(file_name):
 
 @app.route('/market')
 def market_page():
-    global changes_made
-    today = datetime.now()
-    dd, mm, yyyy = today.day, today.month, today.year
-    df = stock_df(symbol="SBIN", from_date=date(2024,1,25),
-                to_date=date(yyyy,mm,dd), series="EQ")
-    last_day = df.iloc[0]['DATE']
-    month, day, year = last_day.month, last_day.day, last_day.year
-    name_month = month_name(month)
-    file_name = 'cm'+str(day)+name_month+str(year)+'bhav.csv'
-    bhavcopy_save(date(year,month,day), "./")
+    if 'user_id' in session:
+        global changes_made
+        today = datetime.now()
+        dd, mm, yyyy = today.day, today.month, today.year
+        df = stock_df(symbol="SBIN", from_date=date(2024,1,25),
+                    to_date=date(yyyy,mm,dd), series="EQ")
+        last_day = df.iloc[0]['DATE']
+        month, day, year = last_day.month, last_day.day, last_day.year
+        name_month = month_name(month)
+        file_name = 'cm'+str(day)+name_month+str(year)+'bhav.csv'
+        bhavcopy_save(date(year,month,day), "./")
 
-    if not changes_made:
-        change_csv(file_name)
-    
-    df = pd.read_csv(file_name)
-    columns_to_keep = ['SYMBOL', 'OPEN', 'HIGH','LOW','CLOSE','SERIES']
-    df = df[columns_to_keep]
+        if not changes_made:
+            change_csv(file_name)
+        
+        df = pd.read_csv(file_name)
+        columns_to_keep = ['SYMBOL', 'OPEN', 'HIGH','LOW','CLOSE','SERIES']
+        df = df[columns_to_keep]
 
-    items = df.to_dict(orient='records')
+        items = df.to_dict(orient='records')
+        
+        return render_template('market.html', items=items, username = session['username'])
+    else:
+        flash('Please log in to view user details.')
+        return render_template(url_for('just_login'))
     
-    return render_template('market.html', items=items, username = session['username'])
 
 @app.route('/get_news')
 def get_news():
@@ -332,7 +337,12 @@ def logout():
 
 @app.route('/stocks')
 def stocks_page():
-    return render_template('comparestocks.html', username = session['username'])
+    if 'user_id' in session:
+        
+        return render_template('comparestocks.html', username = session['username'])
+    else:
+        flash('Please log in to view user details.')
+        return render_template(url_for('just_login'))
 
 
 @app.route('/user_details')
