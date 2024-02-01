@@ -10,7 +10,6 @@
     <div id="stock-graph"></div>
 
     <script>
-        // Load the Plotly graph from the HTML content passed from Flask
         var graphDiv = document.getElementById('stock-graph');
         graphDiv.innerHTML = '{{ plot|safe }}';
     </script>
