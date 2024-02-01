@@ -7,8 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column; /* Updated to a column layout */
-    /* align-items: center; Align content in the center */
+    flex-direction: column; 
     height: 100vh;
     background-color: #000000;
 }
@@ -21,12 +20,12 @@ h1 {
     display: flex;
     position: absolute;
     left: 10%;
-    flex-direction: column; /* Updated to a column layout */
+    flex-direction: column;
     justify-content:center;
     align-items: center;
     width: 80%;
     height: 60%;
-    margin-top: 10%; /* Adjust the margin to center the welcome box */
+    margin-top: 10%; 
     border: 1px solid #ddd;
     border-radius: 10px;
     background-color: #CAD5CA;
@@ -54,7 +53,7 @@ h1 {
 .quote {
     font-size: 1.2rem;
     color: #6F7C12;
-    margin-bottom: 1rem; /* Added margin to separate quote and button */
+    margin-bottom: 1rem;
 }
 
 .get-started-btn {
