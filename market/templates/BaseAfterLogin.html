@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="../static/css/style_base.css" />
+    <link rel="stylesheet" href="../static/css/style_BaseAfterLogin.css" />
     {% block head %}
 
     {% endblock %}
@@ -29,22 +29,19 @@
                 height="40px"
               />
             </div>
-            <a href="#" class="brand">TRADE BREEZERS</a>
+            <a href="/dashboard" class="brand">STOCKWYSE</a>
             <div class="nav-links">
-              <a href="/home">Home</a>
-              <a href="/market">Live Market</a>
+              <a href="/dashboard">Home</a>
+              <a href="/market">Market</a>
               <!-- <a href="#">Yesterday Market</a> -->
-              <a href="#">About Us</a>
-              <a href="#">Contact Us</a>
+              <a href="/stocks">Compare Stocks</a>
+              <a href="/filter">filter</a>
             </div>
           </div>
 
           <div class="right-container nav-links">
-            <a href="#">Sign Up</a>
-            <a href="/login">
-              {%block login%}
-              {%endblock%}
-            </a>
+            {% block profile %} {% endblock %} 
+            {% block logout %} {% endblock %}
           </div>
         </div>
       </nav>
@@ -54,7 +51,7 @@
 
     {% endblock %}
     <footer>
-      <p>&copy; 2024 TRADE BREEZERS</p>
+      <p>&copy; 2024 STOCKWYSE</p>
     </footer>
   </body>
 </html>
