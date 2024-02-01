@@ -349,11 +349,10 @@ def stocks_page():
 def user_details():
     if 'user_id' in session:
         user = User.query.get(session['user_id'])
-        user_data = user.user_data
         return render_template('user_details.html', username = session['username'],name_user=user.name_user, email_address=user.email_address,mobile=user.mobile)
     else:
         flash('Please log in to view user details.')
-        return redirect(url_for('login.html'))
+        return redirect(url_for('just_login'))
 
 
 # -------------Login page and registration page using forms ----------------
@@ -413,16 +412,69 @@ def login_page2():
 def dashboard_page():
     return render_template('dashboard.html')
 
-@app.route('/filter')
+
+@app.route('/filter', methods=["GET","POST"])
 def filterpage():
     if 'user_id' in session:
+        global changes_made
+        today = datetime.now()
+        dd, mm, yyyy = today.day, today.month, today.year
+        df = stock_df(symbol="SBIN", from_date=date(2024,1,25),
+                    to_date=date(yyyy,mm,dd), series="EQ")
+        last_day = df.iloc[0]['DATE']
+        month, day, year = last_day.month, last_day.day, last_day.year
+        name_month = month_name(month)
+        file_name = 'cm'+str(day)+name_month+str(year)+'bhav.csv'
+        bhavcopy_save(date(year,month,day), "./")
 
-        return render_template('filter.html',username=session['username'])
+        if not changes_made:
+            change_csv(file_name)
+        
+        df = pd.read_csv(file_name)
+        columns_to_keep = ['SYMBOL', 'OPEN', 'HIGH','LOW','CLOSE','SERIES','PREVCLOSE','TOTALTRADES']
+        df = df[columns_to_keep]
+        df = pd.DataFrame(df)
+
+        # items = df.to_dict(orient='records')
+        if request.method=='POST':
+            filter_option= request.form['stock-select']
+            # if len(request.form['start']) 
+            sort_value = request.form['sort']
+            if sort_value == "sort-a":
+                print("fuck")
+            elif sort_value == "sort-d":
+                print("bkl")
+            
+            min_value = (request.form['start'])
+            max_value = (request.form['end'])
+            if min_value == '':
+                min_value = float(0)
+            else:
+                min_value = float(min_value)
+
+            if max_value == '':
+                max_value = df[filter_option].max()
+            else:
+                max_value = float(max_value)
+                
+            if sort_value == 'sort-a':
+                df = df.sort_values(by=filter_option, ascending=True)
+            elif sort_value=='sort-d':
+                df = df.sort_values(by=filter_option, ascending=False)
+            
+            filtered_df = [row for row in df.to_dict('records') if (min_value <= row[filter_option]) and (row[filter_option] <= max_value)]
+
+            
+                
+            return render_template('filter.html', username=session['username'],filtered_df=filtered_df)
+
+        else:
+            df = df.to_dict(orient='records')
+            return render_template('filter.html',username=session['username'],filtered_df=df)
     else:
         flash('Please log in to access the dashboard.')
         return redirect(url_for('just_login'))
     
-
 import atexit
 import os
 

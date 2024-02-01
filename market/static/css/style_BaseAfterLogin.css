@@ -1,23 +1,15 @@
-/* Reset some default styles */
 body {
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  /* background-color: #212121; Dark background color */
-  color: #ffffff; /* Light text color */
+  color: #ffffff; 
   margin: 0;
   padding: 0;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
-  /* min-height: 150vh; */
-  /* background-color: #000000; */
-  /* background: url("../images/bg5.jpg") repeat center center fixed; */
   background-size: cover;
-  /* opacity:0. ; */
 }
 nav {
   background-color: #000000;
-  /* background: url(../images/bg5.jpg) repeat center center fixed; */
-  /* height: auto; */
   position: fixed;
   min-width: 100%;
   font-weight: 800;
@@ -27,17 +19,13 @@ nav {
 }
 
 .navbar {
-  /* background: url(../images/bg5.jpg); */
   display: flex;
   justify-content: space-between;
   padding: 17px;
   position: relative;
-  /* top: 25px; */
-  /* left: 20px; */
 }
 
 .brand {
-  /* color: linear-gradient(#7a76ff, #2ec7cc, #5154f9); */
   color: #ffffff;
   text-decoration: none;
   font-size: 1.5em;
@@ -63,7 +51,6 @@ nav {
   display: flex;
   gap: 20px;
 }
-/* Responsive styles for smaller screens */
 .left-column {
   display: flex;
   gap: 40px;
@@ -72,15 +59,11 @@ nav {
 footer {
   text-align: center;
   font-size: 1.2rem;
-  /* z-index: 1; */
-  /* background: url(../images/bg5.jpg) repeat center center fixed; */
-  /* height: auto; */
-  /* position: fixed; */
   background-color: #000000;
   color: #fff;
   height: 9.5%;
   font-weight: 700;
   margin-top: auto;
   margin-bottom: 0px;
-  /* z-index: 2; */
+  z-index: 2;
 }

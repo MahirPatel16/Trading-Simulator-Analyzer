@@ -1,262 +1,189 @@
-/* Reset some default styles */
 body {
-    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    /* background-color: #212121; Dark background color */
-    color: #000000; /* Light text color */
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    /* min-height: 150vh; */
-    background-color: #000000;
-    /* background: url("../images/bg5.jpg") repeat center center fixed; */
-    background-size: cover;
-    /* opacity:0. ; */
-  }
-  
-  nav {
-    background-color: #000003;
-    /* background: url(../images/bg5.jpg) repeat center center fixed; */
-    /* height: auto; */
-    position: fixed;
-    min-width: 100%;
-    font-weight: 800;
-    font-size: large;
-    z-index: 1;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  }
-  
-  .navbar {
-    /* background: url(../images/bg5.jpg); */
-    display: flex;
-    justify-content: space-between;
-    padding: 17px;
-    position: relative;
-    /* top: 25px; */
-    /* left: 20px; */
-  }
-  
-  .brand {
-    /* color: linear-gradient(#7a76ff, #2ec7cc, #5154f9); */
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 1.5em;
-    padding-top: 1%;
-  }
-  
-  .nav-links {
-    color: #2ec7cc;
-    display: flex;
-    gap: 30px;
-    margin: 0 15px;
-    padding-top: 10px;
-    cursor: pointer;
-  }
-  .nav-links > a {
-    color: aliceblue;
-    text-decoration: none;
-  }
-  .nav-links > a:hover {
-    color: #7a76ff;
-  }
-  .nav-links > div {
-    display: flex;
-    gap: 20px;
-  }
-  /* Responsive styles for smaller screens */
-  .left-column {
-    display: flex;
-    gap: 40px;
-  }
-  
-  
-  footer {
-    text-align: center;
-    font-size: 1.2rem;
-    /* z-index: 1; */
-    /* background: url(../images/bg5.jpg) repeat center center fixed; */
-    /* height: auto; */
-    /* position: fixed; */
-    background-color: #000003;
-    color: #fff;
-    height: 9.5%;
-    font-weight: 700;
-    margin-top: auto;
-    margin-bottom: 0px;
-    z-index: 2;
-  }
-  
-  
-  /* Reset some default styles */
-  /* body {
-    /* font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #212121; /*Dark background color */
-    /* color: #ffffff; Light text color */
-    /* margin: 0; */
-    /* padding: 0; */
-    /* text-transform: uppercase; */
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* min-height: 150vh; */
-    /* background-color: #000018; */
-    /* background: url("../images/bg5.jpg") repeat center center fixed; */
-    /* background-size: cover; */
-    /* opacity:0. ; */ 
-  /* }  */
-  
-  /* Responsive styles for smaller screens */
-  .form-section {
-    min-width: 400px;
-    /* z-index: 1; */
-    background: url("../images/bg5.jpg") repeat center center fixed;
-    position: relative;
-    /* top: 60%; */
-    /* margin-left: auto; */
-    margin-bottom: 0px;
-    /* height: ; */
-    /* top: 80px; */
-    /* padding-top: 150px; */
-    padding: 20px;
-    /* background-color: #000018; Darker background color for the form section */
-    /* border-radius: 8px; */
-    
-  }
-  
-  form {
-    text-align: center;
-    /* margin-top: 100px; */
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 10px;
-    /* opacity: 1; */
-    text-transform: uppercase;
-    font-weight: 800;
-    color: #ddd; /* Lighter text color for labels */
-  }
-  
-  input,
-  select {
-    width: 100%;
-    /* background: url("../images/bg5.jpg") repeat center center fixed; */
-    padding: 10px;
-    margin-bottom: 20px;
-    /* border: 1px solid #555; Darker border color */
-    cursor: text;
-    /* opacity: 0.4; */
-    border-radius: 8px;
-    border: 1px solid;
-    border-color: #282d33;
-  
-    /* appearance: auto; */
-    box-sizing: border-box;
-    background-color: #0c0c0c; /* Darker background color for input/select */
-    color: #fff; /* Light text color for input/select */
-    transition: all 0.4s ease;
-  }
-  input:hover {
-    border-color: #2ec7cc;
-  }
-  select {
-    cursor: pointer;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    /* background: url('data:image/svg+xml;utf8,<svg fill="#fff" height="24" width="24" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z" /></svg>') no-repeat right center; */
-    /* background-size: 20px; */
-  }
-  select:hover {
-    border-color: #2ec7cc;
-  }
-  button {
-    padding: 12px 20px;
-    background-color: #2ecc71;
-    color: #ffffff;
-    font-weight: 700;
-    /* font-size: 11px; */
-    text-transform: uppercase;
-    box-sizing: border-box;
-    border: solid 1.5px transparent;
-    border-radius: 8px;
-    font-family: Open Sans, sans-serif;
-    cursor: pointer;
-    box-shadow: 2px 1000px 1px #0c0c0c inset;
-    background-image: linear-gradient(135deg, #7a76ff, #7a76ff, #7fe4ff);
-    background-size: 200% 100%;
-    background-position: 99%;
-    transition: box-shadow 0.4s linear;
-    /* transition: background-image  0.4s ease; */
-  }
-  
-  button:hover {
-    /* background-image: #27ae60; */
-    background-image: linear-gradient(#7a76ff, #7a76ff, #7a76ff);
-    box-shadow: none;
-  
-    /* transition: box-shadow 0.1s ease-in-out; */
-  }
-  option {
-    background-color: #212121;
-  }
-  /* footer {
-    text-align: center;
-    font-size: 1.2rem;
-    /* z-index: 1; */
-    /* background: url(../images/bg5.jpg) repeat center center fixed; */
-    /* height: auto; */
-    /* position: fixed; */
-    /* background-color: #3498db; */
-    /* color: #fff; */
-    /* font-weight: 700; */
-    /* margin-top: auto; */
-    /* margin-bottom: 10px; */
-  /* } */
-   */
-  
-  
-  
-  /*-----------------Below changes are specifically from Nikhil files for login and registration forms  */
-  /* Add some spacing between form elements */
-  .form-group {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #ffffff;
+  font-weight: bolder;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #000000;
+}
+
+nav {
+  background-color: #000003;
+  position: fixed;
+  min-width: 100%;
+  font-weight: 800;
+  font-size: large;
+  z-index: 1;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 17px;
+  position: relative;
+}
+
+.brand {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.5em;
+  padding-top: 1%;
+}
+
+.nav-links {
+  color: #2ec7cc;
+  display: flex;
+  gap: 30px;
+  margin: 0 15px;
+  padding-top: 10px;
+  cursor: pointer;
+}
+.nav-links > a {
+  color: aliceblue;
+  text-decoration: none;
+}
+.nav-links > a:hover {
+  color: #7a76ff;
+}
+.nav-links > div {
+  display: flex;
+  gap: 20px;
+}
+.left-column {
+  display: flex;
+  gap: 40px;
+}
+
+footer {
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: #000003;
+  color: #fff;
+  height: 9.5%;
+  font-weight: 700;
+  margin-top: auto;
+  margin-bottom: 0px;
+  z-index: 2;
+}
+
+.form-section {
+  min-width: 400px;
+  position: relative;
+  margin-bottom: 0px;
+  padding: 20px;
+}
+
+form {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #ddd;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  cursor: text;
+  border-radius: 8px;
+  border: 1px solid;
+  border-color: #282d33;
+
+  box-sizing: border-box;
+  background-color: #0c0c0c;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+input:hover {
+  border-color: #2ec7cc;
+}
+select {
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+select:hover {
+  border-color: #2ec7cc;
+}
+button {
+  padding: 12px 20px;
+  /* background-color: #2ecc71; */
+  color: #ffffff;
+  font-weight: 700;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  border: solid 1.5px transparent;
+  border-radius: 8px;
+  font-family: Open Sans, sans-serif;
+  cursor: pointer;
+  box-shadow: 2px 1000px 1px #0c0c0c inset;
+  background-image: linear-gradient(135deg, #7a76ff, #7a76ff, #7fe4ff);
+  background-size: 200% 100%;
+  background-position: 99%;
+  transition: box-shadow 0.4s linear;
+}
+
+button:hover {
+  background-image: linear-gradient(#7a76ff, #7a76ff, #7a76ff);
+  box-shadow: none;
+}
+option {
+  background-color: #212121;
+}
+
+*/ .form-group {
   margin-bottom: 15px;
-  }
-  
-  /* Style the submit button */
-  .btn-primary {
+}
+
+.btn-primary {
   background-color: #007bff;
-  border-color: #007bff;
-  }
-  
-  .btn-primary:hover {
+  /* border-color: #007bff; */
+}
+
+.btn-primary:hover {
   background-color: #0056b3;
   border-color: #0056b3;
-  }
-  
-  /* Add styling for the form container */
-  .form-container {
-  max-width: 400px;
+}
+
+.form-container {
+  color: #ffffff;
+  min-width: 400px;
+  font-weight: 800;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin: 0 auto;
   padding: 15px;
-  border: 2px solid #2ec7cc; /* Add border to create a box */
+  border: 2px solid #2ec7cc;
   border-radius: 8px;
-  background-color: rgba(38, 132, 219, 0.105);
+  background-color: rgba(0, 0, 0, 0.105);
   text-align: center;
   margin-top: 10%;
   position: relative;
   z-index: 2; /* Adjust the top margin to vertically center */
-  }
-  
-  .form-register-container {
+}
+h2{
+  font-weight: bolder;
+}
+.form-register-container {
   max-width: 40%;
-  margin:30%;
+  margin: 30%;
   padding: 15px;
-  border: 2px solid #00ff73; /* Add border to create a box */
+  border: 2px solid #2ec7cc; /* Add border to create a box */
   border-radius: 8px;
-  background-color: rgba(241, 241, 241, 0.721);
+  background-color: rgba(0, 0, 0, 0.721);
   text-align: center;
   margin-top: 6%;
   position: relative;
   z-index: 1; /* Adjust the top margin to vertically center */
-  }
+}
