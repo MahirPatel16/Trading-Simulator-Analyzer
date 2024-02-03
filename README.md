@@ -3,24 +3,23 @@
 ### StockWyse - Navigate Markets with Confidence
 ----
 ---------
-# Main Features of the web application have been listed as follows
+# Main Features of the web application are as follows
 ---------
 ## Registration and Login
 <img src="/screenshots/register.png" width="500" /> <img src="/screenshots/login.png" width="500" />
-* The user has to register their username, password, and other details before login.
-* On login, enter the correct password.
-* Make sure you click the login button "Only Once" after entering the username and password.
+* **User Registration**: Begin your StockWyse journey by registering with a unique username and password, ensuring a personalized and secure login experience.
+* **Secure Login Process**: After registration, users can securely log in by entering their credentials. The "Only Once" login button ensures a seamless and protected login process.
 ---------
 ## HOME - Dashboard
 ![Local Image](/screenshots/dashboard.jpg)
 
 ------
 #### Top Gainers and Top Losers
-- This feature is on the left panel of the user dashboard. The web app collects live market prices from the NSE website and calculates the top gainers and losers among the nifty 50 stocks. If the market is closed when the app is run, it uses the closing price of the last market day for calculations. 
-- The top 3 gainers and the top 3 losers are displayed on the dashboard. When clicked on any of the stocks among these, the user is redirected to the official NSE website of the particular stock, to know the stock information in detail.
+- **Market Insights**: The left panel on the dashboard provides real-time information on the top gainers and losers among the Nifty 50 stocks. Utilizing live market prices or the previous day's closing prices, users can grasp the market dynamics.
+- **In-Depth Stock Exploration**: Clicking on any stock within this section redirects users to the official NSE website for that particular stock, offering a comprehensive view of individual stock details for informed decision-making.
 --------
 #### Business News
-- This feature is present on the right panel of the web application. This collects the latest business news using an external API and displays it on the user dashboard. When clicking on any news headline, the user is directed to the particular news website to find the entire news article.
+- Positioned on the right panel, the Business News feature aggregates the latest business news through an external API. Users can click on any headline that redirects to the details on the respective news website, staying informed about market trends.
 ----------
 #### Nifty 50 index
 - This is the central graph of the user dashboard. The graph is the plot of the variation of the NIFTY-50 index in the last year. NIFTY 50 is a benchmark Indian stock market index that represents the weighted average of 50 of the largest Indian companies listed on the National Stock Exchange.
