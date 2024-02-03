@@ -6,7 +6,7 @@
 # Main Features of the web application have been listed as follows
 ---------
 ## Registration and Login
-<img src="/screenshots/register.png" width="600" /> <img src="/screenshots/login.png" width="600" />
+<img src="/screenshots/register.png" width="500" /> <img src="/screenshots/login.png" width="500" />
 * The user has to register their username, password, and other details before login.
 * On login, enter the correct password.
 * Make sure you click the login button "Only Once" after entering the username and password.
